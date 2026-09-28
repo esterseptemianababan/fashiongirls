@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Girl's | Tampil Cantik, Stylish & Cute</title>
+    
+    <!-- Google Fonts: Playfair Display & Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Style CSS Murni -->
+    <style>
+        :root {
+            /* Tema Terang (Default) */
+            --bg-body: #fffafb;
+            --bg-card: #ffffff;
+            --bg-accent: #fdfbfb;
+            --text-main: #4a4a4a;
+            --text-secondary: #6b7280;
+            --color-pink: #ff9a9e;
+            --color-pink-soft: #fecfef;
+            --color-blue: #a1c4fd;
+            --color-blue-soft: #e0f2fe;
+            --shadow-pop-pink: #ffb6c1;
+            --shadow-pop-blue: #a1c4fd;
+            --border-color: #4a4a4a;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --nav-border: rgba(255, 182, 193, 0.3);
+            --gradient-candy: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+            --gradient-text: linear-gradient(135deg, #ff758c, #a1c4fd);
+        }
+
+        /* Mode Gelap */
+        body.dark-mode {
+            --bg-body: #0f172a; /* Slate 900 */
+            --bg-card: #1e293b; /* Slate 800 */
+            --bg-accent: #111827; /* Gray 900 */
+            --text-main: #f1f5f9; /* Slate 100 */
+            --text-secondary: #94a3b8; /* Slate 400 */
+            --color-pink: #db2777; /* Deep pink */
+            --color-pink-soft: #4c0519;
+            --color-blue: #3b82f6;
+            --color-blue-soft: #172554;
+            --shadow-pop-pink: #be185d;
+            --shadow-pop-blue: #1e40af;
+            --border-color: #334155;
+            --nav-bg: rgba(30, 41, 59, 0.85);
+            --nav-border: rgba(244, 114, 182, 0.2);
+            --gradient-candy: linear-gradient(135deg, #be185d 0%, #4c1d95 100%);
+            --gradient-text: linear-gradient(135deg, #f472b6, #818cf8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* FIXED TOP MARQUEE (Kecil & Elegan di Paling Atas) */
+        .top-marquee {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 32px;
+            background: var(--gradient-candy);
+            z-index: 50;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-item {
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #4a4a4a;
+        }
+        
+        body.dark-mode .marquee-item {
+            color: #ffffff;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* FLOATING CUTE NAVIGATION */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 44px; /* Diberi jarak agar berada di bawah marquee */
+            z-index: 40;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .glass-pill {
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid var(--nav-border);
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 25px -5px rgba(244, 114, 182, 0.15);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .text-gradient {
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--color-pink);
+        }
+
+        .nav-btn {
+            background: var(--gradient-candy);
+            color: #ffffff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 10px rgba(244, 114, 182, 0.2);
+        }
+        
+        body.dark-mode .nav-btn {
+            color: #ffffff;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+            color: #ffffff;
+        }
+
+        /* Toggle Dark Mode Button */
+        .theme-toggle-btn {
+            background: none;
+            border: none;
+            font-size: 1.35rem;
+            cursor: pointer;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.25rem;
+            border-radius: 50%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 1rem;
+            right: 1rem;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 2rem;
+            border: 2px solid var(--border-color);
+            box-shadow: 6px 6px 0px var(--shadow-pop-pink);
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* POP SHADOWS */
+        .pop-shadow-pink {
+            box-shadow: 6px 6px 0px var(--shadow-pop-pink);
+            border: 2px solid var(--border-color);
+        }
+        .pop-shadow-pink:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--shadow-pop-pink);
+        }
+
+        .pop-shadow-blue {
+            box-shadow: 6px 6px 0px var(--shadow-pop-blue);
+            border: 2px solid var(--border-color);
+        }
+        .pop-shadow-blue:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--shadow-pop-blue);
+        }
+
+        .pop-shadow-dark {
+            box-shadow: 6px 6px 0px var(--border-color);
+            border: 2px solid var(--border-color);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            position: relative;
+            padding-top: 180px;
+            padding-bottom: 50px;
+            overflow: hidden;
+            background: radial-gradient(circle at top right, var(--color-pink-soft), transparent 60%),
+                        radial-gradient(circle at bottom left, var(--color-blue-soft), transparent 60%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .badge-new {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-ping {
+            position: relative;
+            display: flex;
+            height: 12px;
+            width: 12px;
+        }
+        .badge-ping-dot-1 {
+            position: absolute;
+            display: inline-flex;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background-color: var(--color-pink);
+            opacity: 0.75;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        .badge-ping-dot-2 {
+            position: relative;
+            display: inline-flex;
+            border-radius: 50%;
+            height: 12px;
+            width: 12px;
+            background-color: var(--color-pink);
+        }
+
+        @keyframes ping {
+            75%, 100% { transform: scale(2); opacity: 0; }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn-pink {
+            background-color: var(--color-pink);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .btn-pink {
+            color: #ffffff;
+        }
+
+        .btn-white {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 360px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 8px solid var(--bg-card);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .blob-shape-1 {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+
+        .blob-shape-2 {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .hero-bg-decor {
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-candy);
+            transform: rotate(6deg) scale(1.05);
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        /* Floating decoration objects */
+        .decor-star {
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            font-size: 2.5rem;
+            color: #fde047;
+            z-index: 20;
+        }
+
+        .decor-heart {
+            position: absolute;
+            bottom: 15%;
+            left: 10%;
+            font-size: 2rem;
+            color: #f43f5e;
+            z-index: 20;
+        }
+
+        .float-anim { animation: floaty 4s ease-in-out infinite; }
+        .float-anim-delayed { animation: floaty 5s ease-in-out infinite 1s; }
+
+        @keyframes floaty {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Wavy divider curves */
+        .wavy-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+            z-index: 20;
+        }
+
+        .wavy-divider svg {
+            display: block;
+            width: calc(130% + 1.3px);
+            height: 70px;
+        }
+
+        .wavy-divider .shape-fill {
+            fill: var(--bg-body);
+        }
+
+        /* TENTANG KAMI */
+        .about-section {
+            padding: 6rem 0;
+            background-color: var(--bg-body);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-collage {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 480px;
+        }
+
+        .about-img-1 {
+            width: 60%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            transform: rotate(-3deg);
+        }
+
+        .about-img-2 {
+            width: 50%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 2rem;
+            border: 4px solid var(--bg-card);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 20;
+            transform: rotate(6deg);
+        }
+
+        .about-img-1:hover, .about-img-2:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 30;
+        }
+
+        .about-text {
+            text-align: left;
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: var(--color-pink-soft);
+            color: var(--color-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        body.dark-mode .icon-box {
+            background-color: #3f0f20;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .about-quote {
+            background-color: var(--color-blue-soft);
+            border-radius: 1.5rem;
+            padding: 1.75rem;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        body.dark-mode .about-quote {
+            background-color: #172554;
+        }
+
+        .about-quote p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        .quote-icon {
+            font-size: 2.5rem;
+            color: var(--color-blue);
+            position: absolute;
+            top: -1.25rem;
+            left: -0.75rem;
+            background-color: var(--bg-body);
+            padding: 0 0.5rem;
+        }
+
+        /* LAYANAN KAMI */
+        .services-section {
+            padding: 6rem 0;
+            background-color: var(--bg-accent);
+            border-radius: 3rem;
+            margin: 0 2rem 6rem 2rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .header-tag {
+            background-color: var(--bg-card);
+            border: 2px solid var(--border-color);
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            color: var(--color-pink);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .service-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--color-pink-soft);
+            color: var(--color-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem auto;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .service-card-icon {
+            background-color: #3f0f20;
+        }
+
+        .service-card:hover .service-card-icon {
+            background-color: var(--color-pink);
+            color: #ffffff;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .service-desc {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Layanan Card 2 khusus blue */
+        .service-card.blue-card .service-card-icon {
+            background-color: var(--color-blue-soft);
+            color: var(--color-blue);
+        }
+        body.dark-mode .service-card.blue-card .service-card-icon {
+            background-color: #1e3a8a;
+        }
+        .service-card.blue-card:hover .service-card-icon {
+            background-color: var(--color-blue);
+            color: #ffffff;
+        }
+
+        /* PORTOFOLIO (CUTE ASYMMETRICAL GRID) */
+        .portfolio-section {
+            padding: 4rem 0;
+            background-color: var(--bg-body);
+            position: relative;
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 240px; 
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid var(--bg-card);
+            background-color: var(--bg-card);
+            height: 100%;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 30;
+        }
+        
+        body.dark-mode .portfolio-overlay {
+            background-color: rgba(30, 41, 59, 0.95);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .item-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-pink);
+            text-transform: uppercase;
+        }
+
+        .item-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .order-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-pink-soft);
+            color: var(--color-pink);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        body.dark-mode .order-btn {
+            background-color: #3f0f20;
+        }
+        .order-btn:hover {
+            background-color: var(--color-pink);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Logika Asimetris Grid */
+        .item-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .item-tall {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .item-normal {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        /* KONTAK KAMI / PEMESANAN */
+        .contact-section {
+            padding: 6rem 0;
+            background-color: var(--bg-body);
+            position: relative;
+        }
+
+        .contact-card {
+            background: var(--gradient-candy);
+            border-radius: 3rem;
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-info {
+            color: #ffffff;
+            text-align: left;
+        }
+        
+        body.dark-mode .contact-info {
+            color: #ffffff;
+        }
+
+        .contact-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .contact-item-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #ffffff;
+            color: var(--color-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-item-icon.blue-icon {
+            color: var(--color-blue);
+        }
+
+        .contact-item-details h4 {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .contact-item-details p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Formulir Kontak & Pemesanan */
+        .contact-form-box {
+            background-color: var(--bg-card);
+            border-radius: 2rem;
+            padding: 2.5rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--bg-accent);
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .form-input:focus {
+            border-color: var(--color-pink);
+        }
+
+        /* Tombol Aksi */
+        .form-buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-wa {
+            background-color: #25d366;
+            color: white;
+        }
+        .btn-wa:hover {
+            background-color: #20ba56;
+        }
+
+        .btn-email {
+            background-color: var(--text-main);
+            color: var(--bg-card);
+        }
+
+        /* Overlay Notifikasi */
+        .feedback-banner {
+            display: none;
+            background-color: #10b981; /* Green */
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--bg-card);
+            padding: 4rem 0 2rem 0;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background-color: var(--bg-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-pink);
+        }
+
+        .footer-copyright {
+            border-top: 2px dashed var(--nav-border);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* RESPONSIVE DESIGN (MEDIA QUERIES) */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 4rem;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .about-collage {
+                order: -1;
+                height: 380px;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .icon-box {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                top: 44px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.show {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.75rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 240px;
+            }
+
+            .item-large, .item-tall, .item-normal {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .contact-card {
+                padding: 2rem;
+            }
+        }
+
+        /* GLITTER CONTAINER & ANIMATION */
+        #glitter-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .glitter-star {
+            position: absolute;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0;
+            animation: fall linear infinite, sparkle ease-in-out infinite alternate;
+        }
+        
+        @keyframes fall {
+            0% {
+                top: -5%;
+                transform: rotate(0deg) translateX(0);
+            }
+            100% {
+                top: 105%;
+                transform: rotate(360deg) translateX(25px);
+            }
+        }
+        
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 0.9;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CONTAINER UNTUK EFEK GLITTER BERJATUHAN -->
+    <div id="glitter-container"></div>
+
+    <!-- TULISAN BERJALAN (MARQUEE) DI PALING ATAS -->
+    <div class="top-marquee">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="marquee-item"><i class="ph-fill ph-star"></i> DISKON 50% UNTUK KOLEKSI DRESS GLAMOR <i class="ph-fill ph-star"></i></div>
+                <div class="marquee-item"><i class="ph-fill ph-heart"></i> GRATIS ONGKIR SELURUH INDONESIA <i class="ph-fill ph-heart"></i></div>
+                <div class="marquee-item"><i class="ph-fill ph-sparkle"></i> TAMPIL STYLISH SETIAP HARI BERSAMA FASHION GIRL'S <i class="ph-fill ph-sparkle"></i></div>
+                <!-- Konten diduplikasi agar bersambung -->
+                <div class="marquee-item"><i class="ph-fill ph-star"></i> DISKON 50% UNTUK KOLEKSI DRESS GLAMOR <i class="ph-fill ph-star"></i></div>
+                <div class="marquee-item"><i class="ph-fill ph-heart"></i> GRATIS ONGKIR SELURUH INDONESIA <i class="ph-fill ph-heart"></i></div>
+                <div class="marquee-item"><i class="ph-fill ph-sparkle"></i> TAMPIL STYLISH SETIAP HARI BERSAMA FASHION GIRL'S <i class="ph-fill ph-sparkle"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING CUTE NAVIGATION -->
+    <header>
+        <div class="glass-pill">
+            <a href="#beranda" class="logo">
+                <i class="ph-fill ph-sparkle text-gradient"></i> <span class="text-gradient">Fashion Girl's</span>
+            </a>
+            
+            <nav>
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#layanan">Koleksi</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#kontak" class="nav-btn">Pesan Sekarang</a>
+                <button class="theme-toggle-btn" id="theme-toggle-desktop" aria-label="Ganti Tema">
+                    <i class="ph-fill ph-moon"></i>
+                </button>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle-btn" id="theme-toggle-mobile" style="display: none;" aria-label="Ganti Tema Mobile">
+                    <i class="ph-fill ph-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Buka Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Navigasi Mobile -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#layanan">Koleksi</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#kontak" class="nav-btn" style="display: inline-block;">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge-new pop-shadow-blue">
+                    <span class="badge-ping">
+                        <span class="badge-ping-dot-1"></span>
+                        <span class="badge-ping-dot-2"></span>
+                    </span>
+                    Koleksi Terbaru 2026!
+                </div>
+                
+                <h1 class="hero-title">
+                    Tampil <span class="italic text-gradient">Stylish</span> & Percaya Diri
+                </h1>
+                
+                <p class="hero-desc">
+                    Ingin tampil lebih stylish, fashionable, dan percaya diri di setiap kesempatan? <strong style="color: var(--color-pink)">Fashion Girl’s</strong> adalah pilihan yang tepat untukmu!
+                </p>
+                
+                <div class="btn-group">
+                    <a href="#layanan" class="btn-main btn-pink pop-shadow-pink">
+                        Lihat Koleksi 😍
+                    </a>
+                    <a href="#tentang" class="btn-main btn-white pop-shadow-blue">
+                        Kenalan Yuk!
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <div class="hero-img-wrapper float-anim">
+                    <!-- GAMBAR HERO (Set Pink) -->
+                    <img src="https://i.ibb.co.com/RT3J7kvp/e47fb5c35cc83be4a2353d1a55547951.jpg" alt="Cute Pink Outfit" class="hero-img blob-shape-1">
+                    <div class="hero-bg-decor blob-shape-2"></div>
+                </div>
+                <!-- Hiasan bintang dan hati melayang -->
+                <i class="ph-fill ph-star decor-star float-anim-delayed"></i>
+                <i class="ph-fill ph-heart decor-heart float-anim"></i>
+            </div>
+        </div>
+
+        <!-- Wavy Bottom Curve -->
+        <div class="wavy-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="about-section">
+        <div class="container about-grid">
+            <div class="about-collage">
+                <!-- GAMBAR TENTANG KAMI 1 (Trench Coat Hitam) -->
+                <img src="https://i.ibb.co.com/h61gh8j/63319c48bc83d5d639e6c813881b07e7.jpg" alt="Chic Trench Coat" class="about-img-1 pop-shadow-blue">
+                <!-- GAMBAR TENTANG KAMI 2 (Dress Mekar Pink) -->
+                <img src="https://i.ibb.co.com/NgssDcKs/cd4394549796e05424e4e2f4f94eaa6c.jpg" alt="Cute Fluffy Dress" class="about-img-2 pop-shadow-pink">
+            </div>
+
+            <div class="about-text">
+                <div class="icon-box pop-shadow-pink">
+                    <i class="ph-fill ph-magic-wand"></i>
+                </div>
+                <h2 class="section-title">Tentang <span class="text-gradient">Fashion Girl's</span></h2>
+                
+                <p class="about-desc">
+                    Website ini menyediakan berbagai koleksi outfit modern yang nyaman dan cocok digunakan untuk aktivitas sehari-hari. Desain kami memastikan kamu selalu bebas bergerak dengan gaya yang menggemaskan! 🎀
+                </p>
+                
+                <div class="about-quote pop-shadow-blue">
+                    <i class="ph-fill ph-quotes quote-icon"></i>
+                    <p>
+                        "Eitsss.....tidak hanya itu, Fashion Girl’s juga menghadirkan beragam pilihan dress glamor dan elegan yang siap membuat penampilanmu semakin memukau di setiap momen spesial. ✨"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN KAMI -->
+    <section id="layanan" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="header-tag">Layanan Spesial Kami</span>
+                <h2 class="section-title">Pilih Gaya <span class="text-gradient">Favoritmu!</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Apapun mood-mu hari ini, kami punya koleksi yang pas buat menemani harimu.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card pop-shadow-pink" style="cursor: pointer;" onclick="pilihAktivitas('Daily Modern Outfit')">
+                    <div class="service-card-icon">
+                        <i class="ph-fill ph-t-shirt"></i>
+                    </div>
+                    <h3 class="service-title">Glamor Dress</h3>
+                    <p class="service-desc">Koleksi gaun pesta mewah untuk momen spesialmu. Bersiaplah jadi pusat perhatian! ✨.</p>
+                </div>
+
+                <!-- Card 2 (Blue) -->
+                <div class="service-card blue-card pop-shadow-blue" style="cursor: pointer;" onclick="pilihAktivitas('Glamour & Elegant Dress')">
+                    <div class="service-card-icon">
+                        <i class="ph-fill ph-dress"></i>
+                    </div>
+                    <h3 class="service-title">Mini Dress</h3>
+                    <p class="service-desc">Tampil Fresh,modis dan penuh percaya diri dengan koleksi mini dress kami. Pilihan sempurna untuk kencan di hari spesial mu! ✨</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card pop-shadow-pink" style="cursor: pointer;" onclick="pilihAktivitas('Personal Styling Consultation')">
+                    <div class="service-card-icon">
+                        <i class="ph-fill ph-crown"></i>
+                    </div>
+                    <h3 class="service-title">Casual</h3>
+                    <p class="service-desc">Pakaian santai yang mengutamakan kenyamanan tanpa mengurangi gaya. Tetap tampil effortlessly stylish saat hangout atau bersantai! ✨.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIO (CUTE ASYMMETRICAL GRID - UKURAN SEDANG) -->
+    <section id="portofolio" class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-header">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 0.5rem;">Lookbook <span class="text-gradient">Gaun Impian Anda</span> 🌸</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">Intip inspirasi outfit dan dress terfavorit minggu ini. Klik tombol 🛒 untuk langsung memesan.</p>
+                </div>
+            </div>
+
+            <!-- Asymmetrical Grid System -->
+            <div class="portfolio-grid">
+                
+                <!-- Item 1: Large (Elegant Ombre Dress) -->
+                <div class="portfolio-item item-large pop-shadow-pink">
+                    <img src="https://i.ibb.co.com/kgfPydRC/0cd8e2ba3fee868f6742264bd6b87e82.jpg" alt="Elegant Ombre Dress" style="object-position: top;">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Glamour Dress</p>
+                            <h4 class="item-title">Gold Princess</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('Burgundy Princess (Glamour Dress)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 2: Tall (Casual Cardigan & Jeans) -->
+                <div class="portfolio-item item-tall pop-shadow-blue">
+                    <img src="https://i.ibb.co.com/4nR3ZBPC/92309455fdf0091fa9966070cd610813.jpg" alt="Casual Cardigan">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Glamour Dress</p>
+                            <h4 class="item-title">Princess Vibes</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('Autumn Vibes (Daily Outfit)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 3: Square (White Fuzzy Skirt Set) -->
+                <div class="portfolio-item item-normal pop-shadow-pink">
+                    <img src="https://i.ibb.co.com/SXdHsWZb/mini-dress.jpg" alt="White Fuzzy Skirt" style="object-position: top;">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Mini Dress</p>
+                            <h4 class="item-title">Soft Pink</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('Pearl Elegance (Daily Outfit)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 4: Square (Oversized Shirt & Lace) -->
+                <div class="portfolio-item item-normal pop-shadow-blue">
+                    <img src="https://i.ibb.co.com/W4dK62zW/a1eb499126728f678a7746b3ba8c140f.jpg" alt="Oversized Shirt">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Mini Dress</p>
+                            <h4 class="item-title">Pinky</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('City Stroll Chic (Street Chic)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 5: Square (Oversized Shirt & Lace) -->
+                <div class="portfolio-item item-normal pop-shadow-blue">
+                    <img src="https://i.ibb.co.com/SD2nBvD5/c559e61c5bc589afd83b5b97ddf54616.jpg" alt="Oversized Shirt">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Casual</p>
+                            <h4 class="item-title">London Classy</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('City Stroll Chic (Street Chic)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 6: Tambahan (London Classy Trench Coat) -->
+                <div class="portfolio-item item-normal pop-shadow-pink">
+                    <img src="https://i.ibb.co.com/zT2dyZsK/bedc227e4cb6fadd7eac7cbd2ee9dc09.jpg" alt="Winter Trench Coat">
+                    <div class="portfolio-overlay">
+                        <div>
+                            <p class="item-category">Casual</p>
+                            <h4 class="item-title">London Vibes</h4>
+                        </div>
+                        <button class="order-btn" title="Pesan Gaun Ini" onclick="pesanGaun('London Classy (Winter Edit)')"><i class="ph-fill ph-shopping-cart"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK KAMI & FORMULIR ORDER -->
+    <section id="kontak" class="contact-section">
+        <div class="container">
+            <div class="contact-card pop-shadow-pink">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="contact-title font-serif">Pesan Gaun Impianmu ✨</h2>
+                        <p class="contact-desc">
+                            Pilih gaun pilihanmu di atas atau isi langsung detail pesananmu di formulir samping. Pesan Anda akan langsung diteruskan ke WhatsApp atau Email Butik kami!
+                        </p>
+
+                        <div class="contact-item-box">
+                            <div class="contact-item-icon">
+                                <i class="ph-fill ph-map-pin"></i>
+                            </div>
+                            <div class="contact-item-details">
+                                <h4>Butik Fashion Girl's</h4>
+                                <p>Jl. Mangaan 1 No. 148, Mabar Hilir, Medan</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-box">
+                            <div class="contact-item-icon blue-icon">
+                                <i class="ph-fill ph-whatsapp-logo"></i>
+                            </div>
+                            <div class="contact-item-details">
+                                <h4>WhatsApp Admin</h4>
+                                <p>+62 85260361496</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulir Kontak Berfungsi Mengirim Email & WA -->
+                    <div class="contact-form-box">
+                        <h3 class="form-title font-serif">Formulir Order 💌</h3>
+                        
+                        <form id="form-pesan">
+                            <div class="form-group">
+                                <label class="form-label" for="form-nama">Nama Lengkap / Panggilan</label>
+                                <input type="text" id="form-nama" class="form-input" placeholder="Misal: Bella" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="form-kontak-info">Nomor WhatsApp Aktif</label>
+                                <input type="text" id="form-kontak-info" class="form-input" placeholder="Misal: 081234567xxx" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="form-pilihan-gaun">Gaun / Layanan yang Dipilih</label>
+                                <input type="text" id="form-pilihan-gaun" class="form-input" placeholder="Pilih dari lookbook atau ketik sendiri..." required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="form-pesan-isi">Catatan Tambahan (Ukuran / Warna / Tanggal Fitting)</label>
+                                <textarea id="form-pesan-isi" class="form-input" rows="3" placeholder="Mau tanya dress yang warna pink ukuran M ready kak? Rencana fitting hari Sabtu depan..." required style="resize: none;"></textarea>
+                            </div>
+                            
+                            <div class="form-buttons-container">
+                                <button type="button" onclick="kirimWhatsApp()" class="submit-btn btn-wa pop-shadow-pink">
+                                    Kirim Via WhatsApp <i class="ph-fill ph-whatsapp-logo"></i>
+                                </button>
+                                <button type="button" onclick="kirimEmail()" class="submit-btn btn-email pop-shadow-dark">
+                                    Kirim Via Email <i class="ph-fill ph-paper-plane-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="feedback-success" class="feedback-banner">
+                            Memproses pesanan Anda... 🚀
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container text-center">
+            <h2 class="logo footer-logo">
+                <i class="ph-fill ph-sparkle text-gradient"></i> <span class="text-gradient">Fashion Girl's</span>
+            </h2>
+            
+            <div class="social-row">
+                <a href="#" class="social-link pop-shadow-pink" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                <a href="#" class="social-link pop-shadow-blue" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
+                <a href="#" class="social-link pop-shadow-pink" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            </div>
+
+            <nav class="footer-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#layanan">Koleksi</a>
+                <a href="#portofolio">Portofolio</a>
+            </nav>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Fashion Girl's. Dibuat dengan penuh 💖 untuk kamu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS JAVASCRIPT MURNI -->
+    <script>
+        // Data nomor WA dan Email tujuan
+        const NOMOR_WA_TUJUAN = "6285260361496"; 
+        const EMAIL_TUJUAN = "butikfashiongirls@example.com";
+
+        // 1. MENU NAVIGASI MOBILE TRIGGER
+        const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuTrigger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+            const icon = mobileMenuTrigger.querySelector('i');
+            if (mobileMenu.classList.contains('show')) {
+                icon.className = 'ph ph-x';
+            } else {
+                icon.className = 'ph ph-list';
+            }
+        });
+
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+                mobileMenuTrigger.querySelector('i').className = 'ph ph-list';
+            });
+        });
+
+        // 2. LOGIKA FITUR GELAP & TERANG (DARK MODE)
+        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        function adjustThemeButtonVisibility() {
+            if (window.innerWidth <= 768) {
+                themeToggleMobile.style.display = 'flex';
+                themeToggleDesktop.style.display = 'none';
+            } else {
+                themeToggleMobile.style.display = 'none';
+                themeToggleDesktop.style.display = 'flex';
+            }
+        }
+        window.addEventListener('resize', adjustThemeButtonVisibility);
+        adjustThemeButtonVisibility();
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            updateThemeIcons(true);
+        }
+
+        function updateThemeIcons(isDark) {
+            const icons = document.querySelectorAll('.theme-toggle-btn i');
+            icons.forEach(icon => {
+                if (isDark) {
+                    icon.className = 'ph-fill ph-sun';
+                } else {
+                    icon.className = 'ph-fill ph-moon';
+                }
+            });
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcons(isDark);
+        }
+
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+
+        // 3. LOGIKA INTERAKSI PEMESANAN (LOOKBOOK & LAYANAN)
+        function pesanGaun(namaGaun) {
+            document.getElementById('form-pilihan-gaun').value = namaGaun;
+            document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function pilihAktivitas(namaLayanan) {
+            document.getElementById('form-pilihan-gaun').value = `Layanan: ${namaLayanan}`;
+            document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        // 4. INTEGRASI VALIDASI DAN PENGIRIMAN DATA (WA & EMAIL)
+        function validasiForm() {
+            const nama = document.getElementById('form-nama').value.trim();
+            const kontakInfo = document.getElementById('form-kontak-info').value.trim();
+            const pilihanGaun = document.getElementById('form-pilihan-gaun').value.trim();
+            const pesan = document.getElementById('form-pesan-isi').value.trim();
+
+            if (!nama || !kontakInfo || !pilihanGaun || !pesan) {
+                alert("Harap lengkapi semua kolom formulir terlebih dahulu ya sis! 😊");
+                return null;
+            }
+
+            return { nama, kontakInfo, pilihanGaun, pesan };
+        }
+
+        function tampilkanFeedback(teks) {
+            const feedbackBanner = document.getElementById('feedback-success');
+            feedbackBanner.innerText = teks;
+            feedbackBanner.style.display = 'block';
+            
+            setTimeout(() => {
+                feedbackBanner.style.display = 'none';
+                document.getElementById('form-pesan').reset();
+            }, 4000);
+        }
+
+        // FUNGSI KIRIM WHATSAPP
+        function kirimWhatsApp() {
+            const data = validasiForm();
+            if (!data) return;
+
+            const teksWA = `Halo Kak Admin Fashion Girl's, saya mau pesan gaun/outfit nih! 💕\n\n` +
+                           `📋 *Detail Pemesan:* \n` +
+                           `• Nama: ${data.nama}\n` +
+                           `• No. WA: ${data.kontakInfo}\n\n` +
+                           `👗 *Produk/Layanan Pilihan:* \n` +
+                           `• ${data.pilihanGaun}\n\n` +
+                           `💌 *Catatan Tambahan:* \n` +
+                           `"${data.pesan}"\n\n` +
+                           `Mohon diproses ya kak, terima kasih! ✨`;
+
+            const urlWA = `https://api.whatsapp.com/send?phone=${NOMOR_WA_TUJUAN}&text=${encodeURIComponent(teksWA)}`;
+            
+            tampilkanFeedback("Membuka Aplikasi WhatsApp Anda... 🚀");
+            setTimeout(() => {
+                window.open(urlWA, '_blank');
+            }, 800);
+        }
+
+        // FUNGSI KIRIM EMAIL
+        function kirimEmail() {
+            const data = validasiForm();
+            if (!data) return;
+
+            const subjek = encodeURIComponent(`Pesanan Gaun dari ${data.nama} - Fashion Girl's`);
+            const isiEmail = encodeURIComponent(
+                `Halo Tim Fashion Girl's,\n\nBerikut adalah data pesanan baru yang dikirim via Website:\n\n` +
+                `Detail Pemesan:\n` +
+                `- Nama: ${data.nama}\n` +
+                `- Kontak WA: ${data.kontakInfo}\n\n` +
+                `Produk/Layanan yang Dipilih:\n` +
+                `- ${data.pilihanGaun}\n\n` +
+                `Catatan Tambahan (Ukuran/Warna/Sesi Fitting):\n` +
+                `"${data.pesan}"\n\n` +
+                `------\nHarap hubungi pemesan langsung ke kontak di atas. Terima kasih!`
+            );
+
+            tampilkanFeedback("Membuka Aplikasi Email Anda... 🚀");
+            setTimeout(() => {
+                window.location.href = `mailto:${EMAIL_TUJUAN}?subject=${subjek}&body=${isiEmail}`;
+            }, 800);
+        }
+
+
+        // 5. ANIMASI GLITTER JATUH ELEGAN
+        function createGlitter() {
+            const container = document.getElementById('glitter-container');
+            const glitterCount = 45; 
+            const colors = ['#ff9a9e', '#fecfef', '#a1c4fd', '#fdfbfb', '#ffb6c1'];
+
+            for (let i = 0; i < glitterCount; i++) {
+                let star = document.createElement('div');
+                star.classList.add('glitter-star');
+                
+                let size = Math.random() * 8 + 4; 
+                let left = Math.random() * 100; 
+                let durationFall = Math.random() * 8 + 6; 
+                let delay = Math.random() * 5; 
+                let color = colors[Math.floor(Math.random() * colors.length)];
+
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${left}vw`;
+                star.style.animationDuration = `${durationFall}s, ${durationFall/2}s`;
+                star.style.animationDelay = `${delay}s, ${delay}s`;
+                star.style.backgroundColor = color;
+                star.style.boxShadow = `0 0 ${size}px ${color}`;
+
+                let shapeRandomizer = Math.random();
+                if(shapeRandomizer > 0.5 && shapeRandomizer < 0.8) {
+                    star.style.borderRadius = '2px'; 
+                } else if (shapeRandomizer >= 0.8) {
+                    star.style.borderRadius = '0';
+                    star.style.clipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'; 
+                } else {
+                    star.style.borderRadius = '50%'; 
+                }
+
+                container.appendChild(star);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', createGlitter);
+    </script>
+</body>
+</html>
